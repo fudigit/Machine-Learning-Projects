@@ -1,25 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 28 23:38:40 2019
+@author: Di
+"""
+
+""""""""""""""""""""""""""""""""""""""""""
+'''demo of bias and variance trade off'''
+
 '''error'''
-# Bias = E[(f(x)_hat) - f(x)^2]
+# error = E[(f(x)_hat) - f(x)^2]
 
 '''Bias, where is it from?'''
 # Bias = (  E[f(x)_hat] - f(x)  )^2
-# f(x)_hat has a range of predictions for a given point x, since different underlying dataset can give different f(x)_hat target functions
-# higher bias: more assumptions on the traget function, but less flexible to adapt the shape of data
+# Def: how far on average the prediction is from the true value
+# Note: f(x)_hat has a range of predictions for a given point x, 
+#   since different underlying dataset can give different f(x)_hat target functions
 
+# Higher bias: more assumptions on the traget function, 
+#   but less flexible to adapt to the shape of data
+
+'''Variance'''
 # Variance = E[(f(x)_hat - E[f(x)_hat])^2]
-# how much the predictions for a given point x vary, between different f(x)_hat trained from different underlying datasets
-# higher variance:
+# Def: how much the predictions for a given point x vary, 
+#    between different f(x)_hat trained from different underlying datasets
+
+# higher variance: prediction change widely when the model 
+#   is trained on a different set of data
 
 #https://nbviewer.jupyter.org/github/justmarkham/DAT7/blob/master/notebooks/08_bias_variance.ipynb#Brain-and-body-weight
 
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 28 23:38:40 2019
 
-@author: Di
-"""
-
-'''demo of bias and variance trade off'''
 
 import pandas as pd
 import seaborn as sns
@@ -89,4 +100,3 @@ high variance: model vary widely when different sample is given
 sns.lmplot(x='body', y='brain', data=df, ci=None, col='sample', order=2)
 sns.plt.xlim(-10, 200)
 sns.plt.ylim(-10, 250)
-

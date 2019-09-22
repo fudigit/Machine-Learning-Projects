@@ -27,4 +27,8 @@ Finished the main portion of the project. The best 2 way to make predictions are
   1. df.grouby(colomn(s)), loop through the grouby object. 
   2. Build dictionary of distionary to store the srch_dest_id, cluster, and score
   3. use itemgetter and .items() to sort dictionary
+3. Grouby by certain columns and exploit the data leakage
+  1. Use the try: except function to check if an exact match in test can be found in train
+4. Combine result
+  1. Usage of the f5 function, combine list and eliminate the duplicates, while keep in place
 '''

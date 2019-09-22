@@ -18,3 +18,13 @@ Finished the main portion of the project. The best 2 way to make predictions are
 之前airbnb花了不少时间研究这个项目，现在才发现基本没有用，因为没有用到ML。之前有很多东西看不懂，其实就是利用data leakage和most common的简单思想。
 所以，仔细看数据本身，搞明白数据里的逻辑关系是最重要的！
 
+'''
+一些的方法：
+
+1. 100 Binary classification + top 5
+  1. KFold
+2. Aggregate and get the cluster score for srch_dest_id and cluster pair
+  1. df.grouby(colomn(s)), loop through the grouby object. 
+  2. Build dictionary of distionary to store the srch_dest_id, cluster, and score
+  3. use itemgetter and .items() to sort dictionary
+'''
